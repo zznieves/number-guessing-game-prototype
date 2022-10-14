@@ -18,3 +18,11 @@ or give up.
 
 Best of luck!
 `);
+
+
+// global variables
+const getInput = require('prompt-sync')();
+const randomNum = Math.floor(Math.random() * 101);
+let guess = null;
+
+
