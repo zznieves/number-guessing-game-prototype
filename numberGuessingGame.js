@@ -25,4 +25,20 @@ const getInput = require('prompt-sync')();
 const randomNum = Math.floor(Math.random() * 101);
 let guess = null;
 
+ // user input validation
+ while(true) {
+    guess = Number(getInput('Enter a number between 0 and 100: '));
 
+    // if user input is not valid whole number between 0 and 100, inform user and repeat prompt
+    if((isNaN(guess)) || (guess < 0) || (guess > 100) || (guess % 1 !== 0)) {
+        console.log('Invalid input. Please try again.\n');
+        continue;
+    }
+    // if user input is valid, break out of the loop
+    else {
+        break;
+    }
+ }
+
+ // checkpoint
+ console.log(guess);
